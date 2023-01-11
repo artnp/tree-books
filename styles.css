@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'sans-serif';
+    font-size: 21px;
+    }
+#chapter {
+    background-color: rgb(235, 218, 125);
+    width: 20%; 
+    height: 100%;
+    float:left;
+    overflow: auto;
+    text-align: center;
+    line-height: 80%;
+    }
+li{
+      font-size: large;
+      text-align: left;
+      margin-left:70px;
+      padding: 4px 0;
+    }
+a:link  {
+  color:black;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(228, 208, 97);
+  text-decoration: line-through;
+}
+iframe{
+ position: fixed;
+ width: 79vw;
+ height: calc(77vw/1.77);
+}
+.bg { 
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+opacity: 0.1;
+
+background-position: left;
+z-index: -1;
+}

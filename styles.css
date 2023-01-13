@@ -4,26 +4,35 @@ body {
     font-size: 21px;
     }
 #chapter {
-    background-color: rgb(235, 218, 125);
+    background-color: rgb(224, 212, 139);
     width: 20%; 
     height: 100%;
     float:left;
     overflow: auto;
-    text-align: center;
+    direction: rtl;
     line-height: 80%;
+    text-align: right;
     }
 li{
+    content: "+";
+  padding-right: 5px;
       font-size: large;
-      text-align: left;
-      margin-left:70px;
-      padding: 4px 0;
+      text-align: right;
+  
+      padding: 4px 1px;
+      direction:rtl;
+      list-style-type: circle;
     }
+    li:hover {
+      background: #b0c3d4;
+  
+  }
 a:link  {
   color:black;
   text-decoration: none;
 }
 a:visited {
-  color: rgb(228, 208, 97);
+  color: rgb(224, 212, 139);
   text-decoration: line-through;
 }
 iframe{
@@ -38,7 +47,34 @@ left: 0;
 width: 100vw;
 height: 100vh;
 opacity: 0.1;
-
 background-position: left;
 z-index: -1;
+
+
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+-webkit-animation: myfirst 5s ;
+animation: myfirst 5s ;
+}
+ /* Chrome, Safari, Opera */
+ @-webkit-keyframes myfirst {
+  from {opacity: 0;}
+  to {opacity: 0.1;}
+}
+
+@keyframes myfirst {
+  from {opacity: 0;}
+  to {opacity: 0.1;}
+
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 101%;
+  }
+  100% {
+    background-size: 100%;
+  }
 }

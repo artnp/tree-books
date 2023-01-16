@@ -1,7 +1,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" href="https://artnp.github.io/tree-books/styles.css" />
+	<link rel="stylesheet" type="text/css" href="../styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     .bg { 
@@ -93,6 +93,7 @@
 </div></div>
 </div>
 <div id="vdo"></div>
+<div id="timex"></div>
 
  <script>
 Iframex1 = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'
@@ -100,6 +101,36 @@ Iframex2 = '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; e
   function vdo(x,y,z){
     document.getElementById('vdo').innerHTML= Iframex1 + x + '?start=' + y + '&end=' + z + Iframex2
   }
+
+
+
+showTime = document.querySelector("#timex")
+let seconds = 0
+if (localStorage.getItem("timex"+document.querySelector("#subject").innerHTML) != null) {
+    seconds = parseInt(localStorage.getItem("timex"+document.querySelector("#subject").innerHTML));
+}
+let interval = null
+function timer() {
+  seconds++
+  localStorage.setItem("timex"+document.querySelector("#subject").innerHTML, seconds)
+  hours = Math.floor(seconds / 3600)
+  minutes = Math.floor((seconds - hours * 3600) / 60)
+  secs = Math.floor(seconds % 60)
+  if (hours < 10) {
+    hours = `0${hours}`
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`
+  }
+  if (secs < 10) {
+    secs = `0${secs}`
+  }
+  showTime.innerHTML = `${hours}:${minutes}:${secs}`.fontcolor("white")
+}
+  timer()
+  interval = setInterval(timer, 1000);
+
+
 
 </script>
 </body>

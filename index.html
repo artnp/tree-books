@@ -8,7 +8,7 @@ background-color:black;
 color:white;
 overflow: auto;
 text-align: center;
-padding: 170px 0;
+padding: 10px 0;
 }
 a:link  {
   color:white;
@@ -21,10 +21,29 @@ a:visited {
 </head>
 <body>
     <center>
-    <br><br>
 โปรเจค: <u>Tree-Books</u>
 <br><br>
 <img src="https://www.pngkit.com/png/full/51-519095_black-and-white-tree-of-life-png-transparent.png" width="3%">
+<br>
+<div id="tri-nine"></div>
 </center>
+
+<script>
+let n = new Date().getSeconds()
+let string = "";
+let count = new Date().getMilliseconds();
+
+for (let i = 1; i <= n; i++) {
+  // Internal loop
+  for (let j = 1; j <= i; j++) {
+    string += count;
+    count++;
+  }
+  string += "<br>";
+}
+document.getElementById("tri-nine").innerHTML =string
+
+
+</script>
 </body>
 </html>

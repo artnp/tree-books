@@ -26,9 +26,11 @@ a:visited {
 <img src="https://www.pngkit.com/png/full/51-519095_black-and-white-tree-of-life-png-transparent.png" width="3%">
 <br>
 <div id="tri-nine"></div>
+<audio type="audio/mp3" src="godHz.mp3" autoplay loop></audio>
 </center>
 
 <script>
+  function timex() {
 let n = new Date().getSeconds()
 let string = "";
 let count = new Date().getMilliseconds();
@@ -42,7 +44,8 @@ for (let i = 1; i <= n; i++) {
   string += "<br>";
 }
 document.getElementById("tri-nine").innerHTML =string
-
+  }
+  setInterval(timex, 9000);
 
 </script>
 </body>

@@ -30,6 +30,19 @@ a:visited {
 </center>
 
 <script>
+  let n = new Date().getSeconds()
+let string = "";
+let count = new Date().getMilliseconds();
+
+for (let i = 1; i <= n; i++) {
+  // Internal loop
+  for (let j = 1; j <= i; j++) {
+    string += count;
+    count++;
+  }
+  string += "<br>";
+}
+document.getElementById("tri-nine").innerHTML =string
   function timex() {
 let n = new Date().getSeconds()
 let string = "";

@@ -5,10 +5,16 @@ body {
     }
 #timex{
   position:absolute;
-  bottom:0;
+  bottom:38;
   left:57%;
   padding: 14px;
       }
+ #footing{
+        position:absolute;
+        bottom:0;
+        left:57%;
+        padding: 14px;
+            }
 #chapter {
     background-color: rgb(224, 212, 139);
     width: 20%; 
